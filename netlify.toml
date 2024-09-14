@@ -1,5 +1,5 @@
 [build]
-publish = "dist/DyweWelcomePage"
+publish = "dist/"
 command = "ng build --prod"
 
 [[redirects]]
