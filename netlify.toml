@@ -1,19 +1,33 @@
-[build]
-  command = "npm run build"
-  publish = "dist"
+[
+build
+]
+  command = "ng build --prod"
+  publish = "dist/angular-app"
 
-[functions]
+[
+functions
+]
   directory = "functions"
 
-[headers]
-  [[headers]]
+[
+headers
+]
+  [[
+headers
+]]
     for = "/*"
-    [headers.values]
+    [
+headers.values
+]
       "X-Frame-Options" = "DENY"
       "X-Content-Type-Options" = "nosniff"
 
-[redirects]
-  [[redirects]]
+[
+redirects
+]
+  [[
+redirects
+]]
     from = "/*"
     to = "/index.html"
     status = 200
