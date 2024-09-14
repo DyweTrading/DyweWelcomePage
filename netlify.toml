@@ -2,7 +2,7 @@
 build
 ]
   command = "ng build --prod"
-  publish = "dist/angular-app"
+  publish = "dist/DyweWelcomePage"
 
 [
 functions
