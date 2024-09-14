@@ -1,5 +1,5 @@
 [build]
-publish = "/src/index.html"
+publish = ""
 command = "npm run build"
 
 [[redirects]]
