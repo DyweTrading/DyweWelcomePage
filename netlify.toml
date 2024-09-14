@@ -1,33 +1,8 @@
-[
-build
-]
-  command = "ng build --prod"
-  publish = "dist/DyweWelcomePage"
+[build]
+publish = "dist/DyweWelcomePage"
+command = "ng build --prod"
 
-[
-functions
-]
-  directory = "functions"
-
-[
-headers
-]
-  [[
-headers
-]]
-    for = "/*"
-    [
-headers.values
-]
-      "X-Frame-Options" = "DENY"
-      "X-Content-Type-Options" = "nosniff"
-
-[
-redirects
-]
-  [[
-redirects
-]]
-    from = "/*"
-    to = "/index.html"
-    status = 200
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
