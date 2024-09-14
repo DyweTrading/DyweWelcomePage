@@ -1,0 +1,25 @@
+.metric__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 35px;
+  border: 1px solid var(--border2-color);
+  border-radius: 18px;
+}
+
+.card-1 {
+  transform: translateY(100px);
+}
+
+.card-2 {
+  transform: translateY(200px);
+}
+
+.card-3 {
+  transform: translateY(300px);
+}
+
+.card-4 {
+  transform: translateY(400px);
+}
