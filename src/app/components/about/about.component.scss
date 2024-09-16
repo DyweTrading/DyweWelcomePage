@@ -80,6 +80,15 @@
   transform: translateX(-50%);
 }
 
+.mini-app-images {
+  width: 181px;
+  height: 271px;
+}
+
+.mini-app-images img {
+  object-fit: contain;
+}
+
 /* Security */
 .security {
   position: relative;
