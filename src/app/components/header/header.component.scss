@@ -23,6 +23,30 @@
       gap: 36px;
     }
 
+    &-li {
+      position: relative;
+      &:hover::before {
+        display: inline-block;
+        opacity: 1;
+      }
+    }
+
+    &-li::before {
+      display: none;
+      opacity: 0;
+      position: absolute;
+      content: "Comming Soon...";
+      width: max-content;
+      border-radius: 8px;
+      top: 110%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      font-size: 12px;
+      padding: 12px;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+    }
+
     &-a {
       color: var(--text-color);
       transition: all 0.4s ease-in-out;

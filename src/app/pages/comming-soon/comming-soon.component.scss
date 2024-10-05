@@ -1,0 +1,52 @@
+canvas {
+  position: absolute;
+  background-image: url("/assets/png/Maket1920.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 1660px) {
+  canvas {
+    background-image: url("/assets/png/Maket1660.png");
+  }
+}
+
+@media (max-width: 1450px) {
+  canvas {
+    background-image: url("/assets/png/Maket1450.png");
+  }
+}
+
+@media (max-width: 1250px) {
+  canvas {
+    background-image: url("/assets/png/Maket1250.png");
+  }
+}
+
+@media (max-width: 1040px) {
+  canvas {
+    background-image: url("/assets/png/Maket1040.png");
+  }
+}
+
+@media (max-width: 840px) {
+  canvas {
+    background-image: url("/assets/png/Maket840.png");
+  }
+}
+
+@media (max-width: 600px) {
+  canvas {
+    background-image: url("/assets/png/Maket600.png");
+  }
+}
+
+@media (max-width: 420px) {
+  canvas {
+    background-image: url("/assets/png/Maket320.png");
+  }
+}

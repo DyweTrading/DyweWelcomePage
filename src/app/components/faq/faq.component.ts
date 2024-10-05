@@ -81,7 +81,7 @@ export class FaqComponent implements AfterViewInit {
     {
       title: 'What assets can be traded on Dywe?',
       content:
-        'NFTs and tokens are available for trading on Dywe, providing a wide range of investment and diversification opportunities.',
+        'NFT and tokens are available for trading on Dywe, providing a wide range of investment and diversification opportunities.',
       trasformX: '380',
     },
   ];
