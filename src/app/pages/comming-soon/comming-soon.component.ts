@@ -16,9 +16,9 @@ import {
 export class CommingSoonComponent implements AfterViewInit, OnDestroy {
   @ViewChild('canvas', { static: true }) canvas!: ElementRef<HTMLCanvasElement>;
 
-  public scale = 40;
-  public breaks = 0.003;
-  public endSpeed = 0.09;
+  public scale = 50;
+  public breaks = 0.001;
+  public endSpeed = 0.06;
   public firstLetter = 220;
   public delay = 20;
   private offset: number[] = [];
@@ -41,7 +41,7 @@ export class CommingSoonComponent implements AfterViewInit, OnDestroy {
     // Перезапуск рандомного времени каждые 5 секунд
     this.intervalId = setInterval(() => {
       this.resetAnimation();
-    }, 7000);
+    }, 10000);
 
     // Добавляем слушатель события изменения размера окна
     this.resizeListener = () => this.resizeCanvas();
@@ -52,7 +52,7 @@ export class CommingSoonComponent implements AfterViewInit, OnDestroy {
     const ctx = this.canvas.nativeElement.getContext('2d')!;
     const randomTime = this.getRandomTime();
     const timeText = randomTime.split('');
-    const charsArray = '0123456789:'.split('');
+    const charsArray = '0123456789:hms '.split('');
 
     // Очистка предыдущих значений
     this.offset = [];
@@ -83,7 +83,7 @@ export class CommingSoonComponent implements AfterViewInit, OnDestroy {
 
       // Рисуем зелёную линию
       const lineY = (canvas.height - this.scale) / 2;
-      ctx.fillStyle = '#7aa435';
+      ctx.fillStyle = 'transparent';
       ctx.fillRect(0, lineY, canvas.width, this.scale);
 
       // Ограничиваем область видимости
@@ -117,7 +117,12 @@ export class CommingSoonComponent implements AfterViewInit, OnDestroy {
           c %= charsArray.length;
           const s = 1 - Math.abs(j + o) / (canvas.height / 2 / this.scale + 1);
           ctx.globalAlpha = s;
-          ctx.font = `${this.scale * s}px Spongition`;
+          if (window.innerWidth < 520) {
+            this.scale = 40;
+            ctx.font = `${this.scale * s}px Spongition`;
+          } else {
+            ctx.font = `${this.scale * s}px Spongition`;
+          }
           ctx.fillText(charsArray[c], this.scale * i, (j + o) * this.scale);
         }
 
@@ -155,7 +160,7 @@ export class CommingSoonComponent implements AfterViewInit, OnDestroy {
     const randomMinutes = this.padZero(Math.floor(Math.random() * 60));
     const randomSeconds = this.padZero(Math.floor(Math.random() * 60));
 
-    return `${randomHours}:${randomMinutes}:${randomSeconds}`;
+    return `${randomHours}h${randomMinutes}m${randomSeconds}s`;
   }
 
   padZero(value: number): string {
