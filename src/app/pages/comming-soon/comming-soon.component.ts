@@ -18,7 +18,7 @@ export class CommingSoonComponent implements AfterViewInit, OnDestroy {
 
   public scale = 50;
   public breaks = 0.001;
-  public endSpeed = 0.06;
+  public endSpeed = 0.09;
   public firstLetter = 220;
   public delay = 20;
   private offset: number[] = [];
@@ -41,7 +41,7 @@ export class CommingSoonComponent implements AfterViewInit, OnDestroy {
     // Перезапуск рандомного времени каждые 5 секунд
     this.intervalId = setInterval(() => {
       this.resetAnimation();
-    }, 10000);
+    }, 8400);
 
     // Добавляем слушатель события изменения размера окна
     this.resizeListener = () => this.resizeCanvas();
