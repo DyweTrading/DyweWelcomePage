@@ -93,7 +93,7 @@ export class RoadmapComponent {
     },
     {
       dateStr: 'Q3/2025',
-      content: 'Connecting a project with Solana',
+      content: 'Connecting the project to other blockchains (Solana, Sui, etc.)',
       isComplete: 'soon',
       transformY: '240',
     },
