@@ -81,19 +81,25 @@ export class RoadmapComponent {
     },
     {
       dateStr: 'Q2/2025',
-      content: 'Demo Trading',
-      isComplete: 'soon',
-      transformY: '160',
-    },
-    {
-      dateStr: 'Q2/2025',
       content: 'Copy Trading',
       isComplete: 'soon',
       transformY: '200',
     },
     {
+      dateStr: 'Q2/2025',
+      content: 'Demo Trading',
+      isComplete: 'soon',
+      transformY: '160',
+    },
+    {
       dateStr: 'Q3/2025',
       content: 'Connecting the project to other blockchains (Solana, Sui, etc.)',
+      isComplete: 'soon',
+      transformY: '240',
+    },
+    {
+      dateStr: 'Q3/2025',
+      content: 'AI Technologies',
       isComplete: 'soon',
       transformY: '240',
     },
