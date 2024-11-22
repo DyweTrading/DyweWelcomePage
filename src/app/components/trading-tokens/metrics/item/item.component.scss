@@ -1,0 +1,10 @@
+.metric__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 35px;
+  border: 1px solid var(--border2o-color);
+  border-radius: 18px;
+}

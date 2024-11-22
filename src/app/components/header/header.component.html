@@ -1,29 +1,43 @@
 <header class="header mt50">
   <div class="header__content">
-    <div class="header__logo">
+    <div [routerLink]="['/']" class="header__logo">
       <img class="header__logo-img" src="./assets/svg/logo.svg" alt="Logo" />
       <p class="header__logo-name logo">Dywe</p>
     </div>
     <nav class="header__navigation">
       <ul class="header__navigation-ul">
         <li class="header__navigation-li">
-          <a class="header__navigation-a nav-link" href="#">Trading NFT</a>
+          <a
+            class="header__navigation-a nav-link"
+            [routerLink]="['/trading-nft']"
+            routerLinkActive="active-link"
+            >Trading NFT</a
+          >
         </li>
         <li class="header__navigation-li">
-          <a class="header__navigation-a nav-link" href="#">Trading Jettons</a>
+          <a
+            class="header__navigation-a nav-link"
+            [routerLink]="['/trading-tokens']"
+            routerLinkActive="active-link"
+            >Trading Jettons</a
+          >
         </li>
         <li class="header__navigation-li">
-          <a class="header__navigation-a nav-link" href="#">Liquidity</a>
+          <a
+            class="header__navigation-a nav-link"
+            [routerLink]="['/liq-pool']"
+            routerLinkActive="active-link"
+            >Liquidity</a
+          >
         </li>
-        <li class="header__navigation-li">
-          <a class="header__navigation-a nav-link" href="#">Copy Trading</a>
-        </li>
+        <!-- <li class="header__navigation-li">
+          <a class="header__navigation-a nav-link" >Copy Trading</a>
+        </li> -->
       </ul>
     </nav>
     <div class="header__buttons">
       <a
         [routerLink]="['/comming-soon']"
-        routerLinkActive="router-link-active"
         class="header__buttons-link button btn-header"
         >Start Now</a
       >

@@ -1,0 +1,12 @@
+<section class="tokens mb-300">
+  <div class="tokens__content">
+    <h2 class="tokens__content-h2 h2-y opacity-0 h2 mb-40">
+      <span class="span-green">Pools</span> tokens
+    </h2>
+    <div class="tokens__grid">
+      @for(tokn of token; track tokn.symbol) {
+      <liq-token-item [tokenData]="tokn" />
+      }
+    </div>
+  </div>
+</section>

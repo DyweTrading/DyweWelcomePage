@@ -1,0 +1,43 @@
+.start-block {
+  padding: 60px 50px;
+  border: 2px solid var(--border2-color);
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__h1 {
+    position: relative;
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -26px;
+      right: -32px;
+      background-image: url("/assets/svg/logo.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 32px;
+      transform: rotate(-30deg);
+    }
+  }
+
+  &__button {
+    padding: 24px 72px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .start-block {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+@media (max-width: 630px) {
+  .start-block__button {
+    padding: 24px 32px;
+  }
+}

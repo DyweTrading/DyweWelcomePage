@@ -1,0 +1,10 @@
+<div class="collections mb-300">
+  <div class="collections__content">
+    <h2 class="collections__content-h2 h2 mb-40">Available collections</h2>
+    <div class="collections__content-list">
+      @for (nft of nftItems; track nft.collName) {
+      <trading-nft-collection-item [nftData]="nft" />
+      }
+    </div>
+  </div>
+</div>

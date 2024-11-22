@@ -1,0 +1,33 @@
+<section class="tablet mb-300">
+  <div class="tablet__content">
+    <ng-content select="[title]"></ng-content>
+
+    <div class="tablet__content-table">
+      <div class="tablet__content-table-head h2-y opacity-0">
+        <div class="tablet__content-table-name">
+          <p class="M-m-20 text-color">#</p>
+          <p class="M-m-20 text-color">Name</p>
+        </div>
+        <div class="tablet__content-table-metrics">
+          <p class="M-m-20 text-color metric-1">Price</p>
+          <p class="M-m-20 text-color metric-2">1h%</p>
+          <p class="M-m-20 text-color metric-3">24h%</p>
+          <p class="M-m-20 text-color metric-4">7d%</p>
+        </div>
+        <div class="tablet__content-table-volume">
+          <p class="M-m-20 text-color">Volume(24h)</p>
+        </div>
+      </div>
+      <div class="skip">
+        @for(tkn of token; track tkn.symbol; let index = $index) {
+        <app-table-item [index]="index + 1" [tokenItem]="tkn" />
+        }
+      </div>
+      <div class="no-skip">
+        @for(tkn of token; track tkn.symbol; let index = $index) {
+        <app-table-item-mob [index]="index + 1" [tokenItem]="tkn" />
+        }
+      </div>
+    </div>
+  </div>
+</section>

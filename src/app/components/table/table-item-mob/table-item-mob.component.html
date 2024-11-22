@@ -1,0 +1,57 @@
+<div class="table-item-mob h2-y opacity-0">
+  <div class="table-item-mob__index-name">
+    <p class="table-item-mob__index M-m-16 text-color">#{{ index }}</p>
+    <div class="table-item-mob__icon-name">
+      <img
+        class="table-item-mob__icon"
+        src="{{ tokenItem.iconUrl }}"
+        alt="Icon Url"
+      />
+      <p class="M-m-16 text-color">{{ tokenItem.symbol }}</p>
+    </div>
+  </div>
+  <div class="table-item-mob__metrics">
+    <div class="table-item-mob__metric">
+      <p class="M-m-16 text-color">Price</p>
+      <p class="M-m-16 text-color">${{ formatWithCommas(tokenItem.price) }}</p>
+    </div>
+    <div class="table-item-mob__metric">
+      <p>1h%</p>
+      <p
+        class="M-m-16 color-main"
+        [ngClass]="{ 'text-wrong': styleFormal(tokenItem.change1h) }"
+      >
+        {{ formatNumber(tokenItem.change1h) }}%
+      </p>
+    </div>
+    <div class="table-item-mob__metric">
+      <p>24h%</p>
+      <p
+        class="M-m-16 color-main"
+        [ngClass]="{ 'text-wrong': styleFormal(tokenItem.change24h) }"
+      >
+        {{ formatNumber(tokenItem.change24h) }}%
+      </p>
+    </div>
+    <div class="table-item-mob__metric">
+      <p>7d%</p>
+      <p
+        class="M-m-16s color-main"
+        [ngClass]="{ 'text-wrong': styleFormal(tokenItem.change7d) }"
+      >
+        {{ formatNumber(tokenItem.change7d) }}%
+      </p>
+    </div>
+    <div class="table-item-mob__metric">
+      <p class="M-m-16 text-color">Volume 24h</p>
+      <div class="table-item-mob__metric-vol">
+        <p class="M-m-16 text-color">
+          ${{ formatWithCommas(tokenItem.volume) }}
+        </p>
+        <p class="M-r-12 text-50">
+          {{ formatWithCommas(tokenItem.volume / 100) }} TON
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
