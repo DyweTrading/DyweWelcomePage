@@ -1,0 +1,20 @@
+.tokens {
+  &__content {
+  }
+  &__content-h2 {
+    text-align: center;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 162px);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1230px) {
+  .tokens__grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, auto);
+  }
+}

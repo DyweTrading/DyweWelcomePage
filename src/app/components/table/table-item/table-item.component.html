@@ -1,0 +1,42 @@
+<div class="table-item h2-y opacity-0">
+  <div class="table-item__index-name">
+    <p class="table-item__index M-m-16 text-color">{{ index }}</p>
+    <div class="table-item__icon-name">
+      <img
+        class="table-item__icon"
+        src="{{ tokenItem.iconUrl }}"
+        alt="Icon Url"
+      />
+      <p class="M-m-16 text-color">{{ tokenItem.symbol }}</p>
+    </div>
+  </div>
+  <div class="table-item__metrics">
+    <p class="M-m-16 text-color metric-1">
+      ${{ formatWithCommas(tokenItem.price) }}
+    </p>
+    <p
+      class="M-m-16 metric-2 color-main"
+      [ngClass]="{ 'text-wrong': styleFormal(tokenItem.change1h) }"
+    >
+      {{ formatNumber(tokenItem.change1h) }}%
+    </p>
+    <p
+      class="M-m-16 metric-3 color-main"
+      [ngClass]="{ 'text-wrong': styleFormal(tokenItem.change24h) }"
+    >
+      {{ formatNumber(tokenItem.change24h) }}%
+    </p>
+    <p
+      class="M-m-16 metric-4 color-main"
+      [ngClass]="{ 'text-wrong': styleFormal(tokenItem.change7d) }"
+    >
+      {{ formatNumber(tokenItem.change7d) }}%
+    </p>
+  </div>
+  <div class="table-item__volume">
+    <p class="M-m-16 text-color">${{ formatWithCommas(tokenItem.volume) }}</p>
+    <p class="M-r-12 text-50">
+      {{ formatWithCommas(tokenItem.volume / 100) }} TON
+    </p>
+  </div>
+</div>

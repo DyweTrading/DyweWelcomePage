@@ -1,0 +1,57 @@
+<div class="token h2-y opacity-0">
+  <div class="token__block">
+    <img class="token__block-img" [src]="tokenData.icon" alt="Token Icon" />
+    <div class="token__block-info">
+      <p class="token__block-info-symbol M-b-24">{{ tokenData.symbol }}</p>
+      <!-- <p class="token__block-info-vol M-r-18">Vol: {{ tokenData.volume }}</p> -->
+    </div>
+  </div>
+  <div class="token__block-end">
+    <div class="token__block-end-images">
+      <img
+        class="token__block-end-images-item token-img-1"
+        [src]="tokenData.icon"
+        alt="Token Icon"
+      />
+      <img
+        class="token__block-end-images-item token-img-2"
+        [src]="tokenData.icon"
+        alt="Token Icon"
+      />
+      <img
+        class="token__block-end-images-item token-img-3"
+        [src]="tokenData.icon"
+        alt="Token Icon"
+      />
+      <img
+        class="token__block-end-images-item token-img-4"
+        [src]="tokenData.icon"
+        alt="Token Icon"
+      />
+      <img
+        class="token__block-end-images-item token-img-5"
+        [src]="tokenData.icon"
+        alt="Token Icon"
+      />
+    </div>
+    <div class="token__block-end-info">
+      <div class="token__block-end-info-bprice">
+        <p class="token__block-end-info-price-sub M-b-20 text-color">Price :</p>
+        <p class="token__block-end-info-price M-b-20 text-color">
+          ${{ formatWithCommas(tokenData.price) }}
+        </p>
+      </div>
+      <div class="token__block-end-info-bchange">
+        <p class="token__block-end-info-change-sub text-color M-m-16">
+          Price Change:
+        </p>
+        <p
+          class="token__block-end-info-change color-main M-m-16"
+          [ngClass]="{ 'text-wrong': styleFormal(tokenData.percentChange) }"
+        >
+          {{ formatNumber(tokenData.percentChange) }}%
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { TokensService } from './services/tokens.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, WelcomeComponent],
+  imports: [RouterOutlet],
+  providers: [TokensService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

@@ -1,0 +1,12 @@
+<section class="token-metrics mb-300">
+  <div class="token-metrics__content">
+    <h2 class="token-metrics__content-h2 h2-y opacity-0 h2 mb-40">
+      {{ title }}
+    </h2>
+    <div class="token-metrics__grid">
+      @for (metric of metricsData; track $index) {
+      <t-item-metric [data]="metric" />
+      }
+    </div>
+  </div>
+</section>

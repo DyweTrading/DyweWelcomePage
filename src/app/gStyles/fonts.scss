@@ -37,12 +37,20 @@
   @include Spongition(32px, 600, 90%);
 }
 
+.M-r-12 {
+  @include Montserrat(12px, 400);
+}
+
 .M-r-14 {
   @include Montserrat(14px, 400);
 }
 
 .M-r-16 {
   @include Montserrat(16px, 400);
+}
+
+.M-r-18 {
+  @include Montserrat(18px, 400);
 }
 
 .M-r-20 {
@@ -57,13 +65,37 @@
   @include Montserrat(28px, 400);
 }
 
+.M-m-16 {
+  @include Montserrat(16px, 500);
+}
+
+.M-m-18 {
+  @include Montserrat(18px, 500);
+}
+
+.M-m-20 {
+  @include Montserrat(20px, 500);
+}
+
+.M-b-16 {
+  @include Montserrat(16px, 600);
+}
+
 .M-b-28 {
   @include Montserrat(28px, 600);
+}
+
+.M-b-24 {
+  @include Montserrat(24px, 600);
 }
 
 .M-bi-24 {
   @include Montserrat(24px, 600);
   font-style: italic;
+}
+
+.M-b-20 {
+  @include Montserrat(20px, 600);
 }
 
 .S-u-80 {
@@ -90,6 +122,22 @@
   @include Spongition(42px, 400, 90%);
 }
 
+.S-ru-52-2 {
+  @include Spongition(52px, 400, 110%, $upcase: true);
+}
+
+.S-m-40 {
+  @include Spongition(40px, 500, 90%);
+}
+
+.S-m-24 {
+  @include Spongition(24px, 500, 90%);
+}
+
+.S-mu-24 {
+  @include Spongition(24px, 500, 90%, $upcase: true);
+}
+
 .S-r-32 {
   @include Spongition(32px, 400, 90%);
 }
@@ -112,12 +160,24 @@
   .h1 span {
     @include Spongition(68px, 400, 100%, $upcase: true);
   }
+
+  .S-ru-52-2 {
+    @include Spongition(42px, 400, 110%, $upcase: true);
+  }
 }
 
 @media (max-width: 1030px) {
   .h1,
   .h1 span {
     @include Spongition(56px, 400, 100%, $upcase: true);
+  }
+
+  .M-m-16 {
+    @include Montserrat(14px, 500);
+  }
+
+  .M-m-20 {
+    @include Montserrat(18px, 500);
   }
 }
 
@@ -182,8 +242,24 @@
     @include Montserrat(20px, 600);
   }
 
-  .S-ru-52 {
+  .S-ru-52-2 {
     @include Spongition(36px, 400, 90%, $upcase: true);
+  }
+
+  .S-m-40 {
+    @include Spongition(32px, 500, 90%);
+  }
+
+  .S-ru-52 {
+    @include Spongition(36px, 400, 110%, $upcase: true);
+  }
+
+  .S-mu-24 {
+    @include Spongition(18px, 500, 110%, $upcase: true);
+  }
+
+  .M-b-24 {
+    @include Montserrat(20px, 600);
   }
 }
 

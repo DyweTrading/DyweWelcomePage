@@ -1,7 +1,8 @@
 <section class="faq mb-300">
   <div class="faq__content">
     <h3 class="faq__content-h3 h2-y opacity-0 h3-u mb-40">HAVE QUESTIOnS?</h3>
-    <div class="faq__flex">
+    <div [ngClass]="{ faq__flex: isImage, 'faq__flex-center': !isImage }">
+      @if(isImage) {
       <div class="faq__content-images opacity-0 x300minus">
         <picture class="faq__content-images-pictures">
           <source
@@ -17,13 +18,14 @@
           <img src="./assets/png/faq-img.png" alt="Graphic" />
         </picture>
       </div>
+      }
       <div class="faq__content-faqs-block">
         @for(item of faqItems; track item.title; let i = $index;){
         <app-faq-item
           [isActive]="activeIndex === i"
           [title]="item.title"
           [content]="item.content"
-          [transformX]="item.trasformX"
+          [transformX]="item.transformX"
           (click)="setActive(i)"
         >
         </app-faq-item>

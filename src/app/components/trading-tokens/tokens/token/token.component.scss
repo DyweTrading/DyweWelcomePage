@@ -1,0 +1,129 @@
+.token {
+  padding: 5px 30px;
+  border: 1px solid var(--border2o-color);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__block {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    &-img {
+      width: 64px;
+      height: 64px;
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+    &-info-symbol {
+    }
+    &-info-vol {
+    }
+  }
+  &__block-end {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    &-images {
+      position: relative;
+      width: 120px;
+      height: 150px;
+    }
+    &-images-item {
+      position: absolute;
+      transform: rotate(11deg);
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      &-price-sub,
+      &-change-sub {
+        display: none;
+      }
+    }
+    &-info-price {
+    }
+    &-info-change {
+    }
+  }
+}
+
+.token-img-1 {
+  top: 0px;
+  left: 15px;
+  opacity: 0.8;
+
+  width: 46px;
+  height: 46px;
+}
+.token-img-2 {
+  top: 30px;
+  right: 0px;
+  opacity: 0.2;
+
+  width: 26px;
+  height: 26px;
+}
+.token-img-3 {
+  top: 50px;
+  left: 40px;
+  opacity: 0.6;
+
+  width: 30px;
+  height: 30px;
+}
+.token-img-4 {
+  bottom: 20px;
+  left: 0px;
+  opacity: 0.4;
+
+  width: 30px;
+  height: 30px;
+}
+.token-img-5 {
+  bottom: 5px;
+  right: 5px;
+
+  width: 55px;
+  height: 55px;
+}
+
+@media (max-width: 630px) {
+  .token {
+    padding: 30px 15px;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .token__block-img {
+    width: 48px;
+    height: 48px;
+  }
+  .token__block-end,
+  .token__block-end-info {
+    width: 100%;
+  }
+
+  .token__block-end-info {
+    row-gap: 6px;
+  }
+
+  .token__block-end-images {
+    display: none;
+  }
+
+  .token__block-end-info-bprice,
+  .token__block-end-info-bchange {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .token__block-end-info-price-sub,
+  .token__block-end-info-change-sub {
+    display: block;
+  }
+}

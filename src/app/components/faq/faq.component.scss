@@ -28,6 +28,11 @@
     align-items: flex-start;
     justify-content: space-between;
   }
+  &__flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 1030px) {

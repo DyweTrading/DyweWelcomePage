@@ -1,0 +1,15 @@
+<div class="container">
+  <app-nav-mobile />
+  <app-header />
+  <trade-tokens-main />
+  <!-- <app-table>
+    <h2 title class="tablet__content-h2 h2-y opacity-0 h2 mb-40">
+      TOP TOKENS FOR <span class="span-green">24h</span>
+    </h2>
+  </app-table> -->
+  <tokens-metrics title="Token Metrics" [metricsData]="data" />
+  <trading-tokens-block />
+  <app-faq [isImage]="false" />
+  <app-start-block />
+</div>
+<app-footer />

@@ -1,0 +1,19 @@
+<div class="top-nft mb-300">
+  <div class="top-nft__content">
+    <h2 class="top-nft__content-h2 h2 mb-20">TOP NFT</h2>
+    <div class="top-nft__content-switcher mb-40">
+      <button
+        class="top-nft__content-swithcher-btn swithcher-btn-active M-b-16"
+      >
+        Day
+      </button>
+      <button class="top-nft__content-swithcher-btn M-r-16">Week</button>
+      <button class="top-nft__content-swithcher-btn M-r-16">Month</button>
+    </div>
+    <div class="top-nft__content-list">
+      @for (nft of nftItems; track nft.collName) {
+      <trading-nft-top-item [nftData]="nft" />
+      }
+    </div>
+  </div>
+</div>
